@@ -31,6 +31,7 @@ public class InstagramTokenHandler extends HttpServlet {
         session.setAttribute(Constants.INSTAGRAM_OBJECT, instagram);
 
         System.out.println(request.getContextPath());
+        System.out.println("accessToken = "+accessToken.getToken());
         // Redirect to User Profile page.
         response.sendRedirect(request.getContextPath() + "/profile.jsp");
 
