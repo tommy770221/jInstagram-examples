@@ -21,6 +21,8 @@ public class DemoAppContextListener implements ServletContextListener {
                 .apiKey(clientId)
                 .apiSecret(clientSecret)
                 .callback(callbackUrl)
+                .scope("basic comments follower_list likes public_content relationships")
+
                 .build();
 
         sce.getServletContext().setAttribute(Constants.INSTAGRAM_SERVICE, service);
